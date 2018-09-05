@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# get binaries
+binaries="$(ls /bin /usr/bin/ /usr/local/bin | grep -vE '^/|^$' )"
+
+# count binaries
+total="$( echo "${binaries}" | wc -l )"
+
+# get random binary
+rand="$(( ( RANDOM % total ) + 1 ))"
+binary="$( echo "${binaries}" | sed "${rand}q;d" )"
+
+echo "\$ ${binary} ${*}"
+eval "${binary} ${*}"
