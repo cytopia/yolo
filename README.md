@@ -36,17 +36,17 @@ yolo --help
 
 ### Don't hurt me
 ```
-yolo -rf /
+sudo yolo -rf /
 ```
 
 ### Bring 'em on!
 ```
-for i in {1..5}; do yolo -rf /; done
+for i in {1..5}; do sudo yolo -rf /; done
 ```
 
 ### Windows install party
 ```
-while true; do yolo -rf /; done
+while true; do sudo yolo -rf /; done
 ```
 
 ## Contributing
