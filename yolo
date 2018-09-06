@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # get binaries
-binaries="$(ls /bin /usr/bin/ /usr/local/bin | grep -vE '^/|^$' )"
+binaries="$(echo "${PATH}" | sed 's/:/ /g' | xargs ls | grep -vE '^/|^$' )"
 
 # count binaries
 total="$( echo "${binaries}" | wc -l )"
